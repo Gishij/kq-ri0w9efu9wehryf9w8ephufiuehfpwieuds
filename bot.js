@@ -20,19 +20,19 @@ flixz8.on('message', message => {
     if(message.author.id !== '282350776456839169') return;
     var args = message.content.split(' ');
     var command = message.content.toLowerCase().split(' ')[0];
-    if(command == 'Apl') {
-        if(!args[1]) return console.log('nofku');
+    if(command == 'apl') {
+        if(!args[1]) return;
         flixz8.user.setActivity(args.slice(1).join(' ')).then(() => message.edit('Done.'));
     }
-    if(command == 'Als') {
+    if(command == 'als') {
         if(!args[1]) return;
         flixz8.user.setActivity(args.slice(1).join(' '), {type: "LISTENING"}).then(() => message.edit('Done.'));
     }
-    if(command == 'Awt') {
+    if(command == 'awt') {
         if(!args[1]) return;
         flixz8.user.setActivity(args.slice(1).join(' '), {type: "WATCHING"}).then(() => message.edit('Done.'));
     }
-    if(command == 'Ast') {
+    if(command == 'ast') {
         if(!args[1]) return;
         flixz8.user.setGame(args.slice(1).join(' '), "https://www.twitch.tv/flixhost").then(() => message.edit('Done.'));
     }
