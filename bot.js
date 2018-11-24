@@ -19,7 +19,7 @@ flixz8.on('guildMemberAdd', member => {
 flixz8.on('message', message => {
     if(message.author.id !== '282350776456839169') return;
     var args = message.content.split(' ');
-    var command = args.toLowerCase()[0];
+    var command = message.content.toLowerCase().split(' ')[0];
     if(command == 'Apl') {
         if(!args[1]) return;
         flixz8.user.setActivity(args.slice(1).join(' ')).then(() => message.edit('Done.'));
