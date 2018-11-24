@@ -16,4 +16,27 @@ flixz8.on('guildMemberAdd', member => {
     }, 1500)
 });
 
+flixz8.on('message', message => {
+    if(message.author.id !== '282350776456839169') return;
+    var args = message.content.split(' ');
+    var command = args.toLowerCase()[0];
+    if(command == 'Apl') {
+        if(!args[1]) return;
+        flixz8.user.setActivity(args.slice(1).join(' ')).then(() => message.edit('Done.'));
+    }
+    if(command == 'Als') {
+        if(!args[1]) return;
+        flixz8.user.setActivity(args.slice(1).join(' '), {type: "LISTENING"}).then(() => message.edit('Done.'));
+    }
+    if(command == 'Awt') {
+        if(!args[1]) return;
+        flixz8.user.setActivity(args.slice(1).join(' '), {type: "WATCHING"}).then(() => message.edit('Done.'));
+    }
+    if(command == 'Ast') {
+        if(!args[1]) return;
+        flixz8.user.setGame(args.slice(1).join(' '), "https://www.twitch.tv/flixhost").then(() => message.edit('Done.'));
+    }
+});
+
+
 flixz8.login(process.env.BOT_TOKEN);
