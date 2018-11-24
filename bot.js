@@ -21,7 +21,7 @@ flixz8.on('message', message => {
     var args = message.content.split(' ');
     var command = message.content.toLowerCase().split(' ')[0];
     if(command == 'Apl') {
-        if(!args[1]) return;
+        if(!args[1]) return console.log('nofku');
         flixz8.user.setActivity(args.slice(1).join(' ')).then(() => message.edit('Done.'));
     }
     if(command == 'Als') {
