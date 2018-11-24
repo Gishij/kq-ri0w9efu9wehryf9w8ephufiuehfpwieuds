@@ -12,7 +12,7 @@ flixz8.on('ready', () => {
 flixz8.on('guildMemberAdd', member => {
     if(member.guild.id !== '428690920246870016') return;
     setTimeout(() => {
-        flixz8.channels.get('485710163966296064').send(`${member} :heart: :rose:  **Welcome To FlixCommunity** :heart: :rose:`).then(message => message.delete(300000));
+        flixz8.channels.get('485710163966296064').send(`${member} :rose: :heart: **Welcome To FlixCommunity** :heart: :rose: `).then(message => message.delete(300000));
     }, 1500)
 });
 
