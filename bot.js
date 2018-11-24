@@ -22,19 +22,19 @@ flixz8.on('message', message => {
     var command = message.content.toLowerCase().split(' ')[0];
     if(command == 'apl') {
         if(!args[1]) return;
-        flixz8.user.setActivity(args.slice(1).join(' ')).then(() => message.edit('Done.'));
+        flixz8.user.setActivity(args.slice(1).join(' ')).then(() => message.edit('**Done.** :white_check_mark:'));
     }
     if(command == 'als') {
         if(!args[1]) return;
-        flixz8.user.setActivity(args.slice(1).join(' '), {type: "LISTENING"}).then(() => message.edit('Done :white_check_mark: '));
+        flixz8.user.setActivity(args.slice(1).join(' '), {type: "LISTENING"}).then(() => message.edit('**Done.** :white_check_mark:'));
     }
     if(command == 'awt') {
         if(!args[1]) return;
-        flixz8.user.setActivity(args.slice(1).join(' '), {type: "WATCHING"}).then(() => message.edit('Done :white_check_mark: '));
+        flixz8.user.setActivity(args.slice(1).join(' '), {type: "WATCHING"}).then(() => message.edit('**Done.** :white_check_mark:'));
     }
     if(command == 'ast') {
         if(!args[1]) return;
-        flixz8.user.setGame(args.slice(1).join(' '), "https://www.twitch.tv/flixhost").then(() => message.edit('Done :white_check_mark: '));
+        flixz8.user.setGame(args.slice(1).join(' '), "https://www.twitch.tv/flixhost").then(() => message.edit('**Done.** :white_check_mark:'));
     }
 });
 
