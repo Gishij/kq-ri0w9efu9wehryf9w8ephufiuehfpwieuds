@@ -38,5 +38,4 @@ flixz8.on('message', message => {
     }
 });
 
-
 flixz8.login(process.env.BOT_TOKEN);
