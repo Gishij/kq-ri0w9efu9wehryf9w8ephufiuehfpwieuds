@@ -9,13 +9,6 @@ flixz8.on('ready', () => {
     }, 1500);
 });
 
-flixz8.on('guildMemberAdd', member => {
-    if(member.guild.id !== '428690920246870016') return;
-    setTimeout(() => {
-        flixz8.channels.get('485710163966296064').send(`${member} :rose: :heart: **Welcome To FlixCommunity** :heart: :rose: `).then(message => message.delete(300000));
-    }, 1500)
-});
-
 flixz8.on('message', message => {
     if(message.author.id !== '282350776456839169') return;
     var args = message.content.split(' ');
