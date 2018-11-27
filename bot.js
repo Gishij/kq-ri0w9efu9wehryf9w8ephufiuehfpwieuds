@@ -25,10 +25,6 @@ flixz8.on('message', message => {
         if(!args[1]) return;
         flixz8.user.setActivity(args.slice(1).join(' '), {type: "WATCHING"}).then(() => message.edit('**Done.** :white_check_mark:'));
     }
-    if(command == 'ast') {
-        if(!args[1]) return;
-        flixz8.user.setGame(args.slice(1).join(' '), "https://www.twitch.tv/flixhost").then(() => message.edit('**Done.** :white_check_mark:'));
-    }
 });
 
 flixz8.login(process.env.BOT_TOKEN);
